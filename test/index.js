@@ -11,6 +11,15 @@ test("constructs and calls callback without throwing", { timeout: 500 }, functio
     })
 })
 
+test("calls preprocess", { timeout: 500 }, function(assert) {
+  xhr({preprocessHtmlRequest: ()=>{
+      assert.ok(true, "preprocess called")
+    }}, function(err, resp, body) {
+    assert.ok(true, "got here")
+    assert.end()
+  })
+})
+
 test("[func] Can GET a url (cross-domain)", { timeout: 2000 }, function(assert) {
     xhr({
         uri: "http://www.mocky.io/v2/55a02cb72651260b1a94f024",
