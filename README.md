@@ -240,8 +240,6 @@ xhr.XMLHttpRequest = MockXMLHttpRequest
 xhr.XDomainRequest = MockXDomainRequest
 ```
 
-## MIT Licenced
-
   [1]: http://xhr.spec.whatwg.org/#the-send()-method
   [2]: http://xhr.spec.whatwg.org/#the-open()-method
   [3]: http://xhr.spec.whatwg.org/#interface-xmlhttprequest
